@@ -16,9 +16,6 @@ interface Item {
 }
 
 const compareFn = (a: Item, b: Item) => {
-  if (!a || !b) {
-    console.log(a, b);
-  }
   return a.weight === b.weight ? 0 : a.weight < b.weight ? -1 : 1;
 };
 
