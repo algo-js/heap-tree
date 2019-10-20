@@ -1,7 +1,26 @@
 // tslint:disable:no-expression-statement
 import test from 'ava';
+import {
+  findMax,
+  findMin,
+  generateIntegerNumber,
+  generateNumber
+} from '../../utils/tests';
+import { HeapTreeEvents } from './heap-tree';
 import { MaxHeapTree } from './max-heap-tree';
 import { MinHeapTree } from './min-heap-tree';
+
+interface Item {
+  name: string;
+  weight: number;
+}
+
+const compareFn = (a: Item, b: Item) => {
+  if (!a || !b) {
+    console.log(a, b);
+  }
+  return a.weight === b.weight ? 0 : a.weight < b.weight ? -1 : 1;
+};
 
 test('min heap tree peeks minimum value', t => {
   const tree = new MinHeapTree<number>();
@@ -225,4 +244,170 @@ test('min heap tree toString', t => {
   tree.add(4);
 
   t.is(tree.toString(), '1,3,2,10,4');
+});
+
+test('heap tree complex data', t => {
+  const items: Item[] = [
+    {
+      name: 'Banana',
+      weight: 10
+    },
+    {
+      name: 'Banana',
+      weight: 50
+    },
+    {
+      name: 'Banana',
+      weight: -5
+    },
+    {
+      name: 'Banana',
+      weight: 23
+    },
+    {
+      name: 'Banana',
+      weight: -23
+    }
+  ];
+
+  const minHeapTree = new MinHeapTree<Item>(compareFn);
+  const maxHeapTree = new MaxHeapTree<Item>(compareFn);
+
+  items.forEach(v => {
+    minHeapTree.add(v);
+    maxHeapTree.add(v);
+  });
+
+  t.deepEqual(minHeapTree.peek(), items[4]);
+  t.deepEqual(maxHeapTree.peek(), items[1]);
+});
+
+test('heap tree high load', t => {
+  const items: Item[] = Array(1e7)
+    .fill(0)
+    .map(v => {
+      return {
+        name: generateIntegerNumber().toString(35),
+        weight: generateNumber()
+      };
+    });
+
+  const minItem = findMin<Item>(items, compareFn);
+  const maxItem = findMax<Item>(items, compareFn);
+
+  const minHeapTree = new MinHeapTree<Item>(compareFn);
+  const maxHeapTree = new MaxHeapTree<Item>(compareFn);
+
+  items.forEach(v => {
+    minHeapTree.add(v);
+    maxHeapTree.add(v);
+  });
+
+  t.is(minHeapTree.peek(), minItem);
+  t.is(maxHeapTree.peek(), maxItem);
+});
+
+test('heap tree add event', t => {
+  const items: Item[] = [
+    {
+      name: 'Banana',
+      weight: 10
+    },
+    {
+      name: 'Banana',
+      weight: 50
+    },
+    {
+      name: 'Banana',
+      weight: -5
+    },
+    {
+      name: 'Banana',
+      weight: 23
+    },
+    {
+      name: 'Banana',
+      weight: -23
+    }
+  ];
+
+  const minHeapTree = new MinHeapTree<Item>(compareFn);
+
+  let insertIndex = 0;
+  minHeapTree.on(HeapTreeEvents.ADDED, item => {
+    t.is(item, items[insertIndex++]);
+  });
+
+  items.forEach(v => minHeapTree.add(v));
+});
+
+test('heap tree before add event', t => {
+  const heap = new MinHeapTree<number>();
+
+  heap.add(1);
+  heap.add(2);
+  heap.add(3);
+  heap.add(-1);
+  heap.add(4);
+  heap.add(5);
+
+  heap.on(HeapTreeEvents.BEFORE_ADDED, value => {
+    t.is(value, -10);
+    t.is(heap.peek(), -1);
+  });
+
+  heap.on(HeapTreeEvents.ADDED, value => {
+    t.is(value, -10);
+    t.is(heap.peek(), -10);
+  });
+
+  t.is(heap.peek(), -1);
+
+  heap.add(-10);
+});
+
+test('heap tree poll events', t => {
+  const heap = new MinHeapTree<number>();
+
+  heap.on(HeapTreeEvents.BEFORE_POLL, value => {
+    t.is(value, -1);
+    t.is(heap.peek(), -1);
+  });
+
+  heap.on(HeapTreeEvents.POLLED, value => {
+    t.is(value, -1);
+    t.is(heap.peek(), 2);
+  });
+
+  heap.add(2);
+  heap.add(3);
+  heap.add(-1);
+  heap.add(4);
+  heap.add(5);
+
+  t.is(heap.peek(), -1);
+  t.is(heap.poll(), -1);
+});
+
+test('heap tree once events', t => {
+  const heap = new MinHeapTree<number>();
+
+  heap.add(1);
+  heap.add(2);
+  heap.add(3);
+  heap.add(-1);
+  heap.add(4);
+  heap.add(5);
+
+  heap.once(HeapTreeEvents.ADDED, value => {
+    t.is(value, -10);
+    t.is(heap.poll(), -10);
+  });
+
+  t.is(heap.peek(), -1);
+
+  heap.add(-10);
+  heap.add(-20);
+
+  t.is(heap.eventNames().length, 0);
 });

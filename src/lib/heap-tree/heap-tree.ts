@@ -1,8 +1,13 @@
-import { Comparator } from '@algo-js/core';
+import { Comparator, EventEmitter, TCompareFn } from '@algo-js/core';
 
-type TCompareFn<T> = (a: T, b: T) => number;
+export const HeapTreeEvents = {
+  ADDED: Symbol('add'),
+  BEFORE_ADDED: Symbol('before_add'),
+  BEFORE_POLL: Symbol('before_poll'),
+  POLLED: Symbol('poll')
+};
 
-export class HeapTree<T> {
+export class HeapTree<T> extends EventEmitter<T> {
   /**
    * @return {boolean}
    */
@@ -21,6 +26,8 @@ export class HeapTree<T> {
   private heap: T[] = [];
 
   constructor(compareFn: TCompareFn<T> = Comparator.defaultCompareFn) {
+    super();
+
     this.comparator = new Comparator<T>(compareFn);
   }
 
@@ -43,16 +50,20 @@ export class HeapTree<T> {
       return null;
     }
 
-    if (this.heap.length === 1) {
-      return this.heap.pop();
-    }
-
     const element = this.heap[0];
 
-    // Move the last element from the end to the head
-    this.heap[0] = this.heap.pop();
+    this.emit(HeapTreeEvents.BEFORE_POLL, element);
 
-    this.heapifyDown();
+    if (this.heap.length === 1) {
+      this.heap.pop();
+    } else {
+      // Move the last element from the end to the head
+      this.heap[0] = this.heap.pop();
+
+      this.heapifyDown();
+    }
+
+    this.emit(HeapTreeEvents.POLLED, element);
 
     return element;
   }
@@ -61,9 +72,13 @@ export class HeapTree<T> {
    * @param {*} element
    * @return {HeapTree}
    */
-  public add(element: T): HeapTree<T> {
+  public add(element: T): this {
+    this.emit(HeapTreeEvents.BEFORE_ADDED, element);
+
     this.heap.push(element);
     this.heapifyUp();
+
+    this.emit(HeapTreeEvents.ADDED, element);
 
     return this;
   }
@@ -73,7 +88,7 @@ export class HeapTree<T> {
    * @param {Comparator} [comparator]
    * @return {HeapTree}
    */
-  public remove(element, comparator = this.comparator): HeapTree<T> {
+  public remove(element, comparator = this.comparator): this {
     // Find number of elements to remove
     const numberOfItemsToRemove = this.find(element, comparator).length;
 
