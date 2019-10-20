@@ -125,8 +125,8 @@ test('heap tree remove', t => {
   tree.add(10);
   tree.add(10);
   tree.add(10);
-  tree.remove(10);
-  t.is(tree.peek(), 1);
+  tree.remove(1);
+  t.is(tree.peek(), 10);
 
   tree.add(10);
   tree.add(1);
