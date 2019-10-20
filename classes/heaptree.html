@@ -78,16 +78,28 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">HeapTree</span>
+						<span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="maxheaptree.html" class="tsd-signature-type">MaxHeapTree</a>
-							</li>
-							<li>
-								<a href="minheaptree.html" class="tsd-signature-type">MinHeapTree</a>
+								<span class="target">HeapTree</span>
+								<ul class="tsd-hierarchy">
+									<li>
+										<a href="maxheaptree.html" class="tsd-signature-type">MaxHeapTree</a>
+									</li>
+									<li>
+										<a href="minheaptree.html" class="tsd-signature-type">MinHeapTree</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><span class="tsd-signature-type">EmitEvents</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">ListenEvents</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -117,9 +129,12 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="heaptree.html#add" class="tsd-kind-icon">add</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#computeleftchildindex" class="tsd-kind-icon">compute<wbr>Left<wbr>Child<wbr>Index</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#computeparentindex" class="tsd-kind-icon">compute<wbr>Parent<wbr>Index</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#computerightchildindex" class="tsd-kind-icon">compute<wbr>Right<wbr>Child<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#emit" class="tsd-kind-icon">emit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="heaptree.html#find" class="tsd-kind-icon">find</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#getleftchild" class="tsd-kind-icon">get<wbr>Left<wbr>Child</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#getparent" class="tsd-kind-icon">get<wbr>Parent</a></li>
@@ -130,9 +145,14 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#heapifydown" class="tsd-kind-icon">heapify<wbr>Down</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#heapifyup" class="tsd-kind-icon">heapify<wbr>Up</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="heaptree.html#iscorrectorder" class="tsd-kind-icon">is<wbr>Correct<wbr>Order</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#off" class="tsd-kind-icon">off</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#on" class="tsd-kind-icon">on</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#once" class="tsd-kind-icon">once</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="heaptree.html#peek" class="tsd-kind-icon">peek</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="heaptree.html#poll" class="tsd-kind-icon">poll</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="heaptree.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="heaptree.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="heaptree.html#swap" class="tsd-kind-icon">swap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="heaptree.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 							</ul>
@@ -146,19 +166,19 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Heap<wbr>Tree<span class="tsd-signature-symbol">(</span>compareFn<span class="tsd-signature-symbol">?: </span><a href="../globals.html#tcomparefn" class="tsd-signature-type">TCompareFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="heaptree.html" class="tsd-signature-type">HeapTree</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Heap<wbr>Tree<span class="tsd-signature-symbol">(</span>compareFn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TCompareFn</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="heaptree.html" class="tsd-signature-type">HeapTree</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L21">lib/heap-tree/heap-tree.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L26">lib/heap-tree/heap-tree.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> compareFn: <a href="../globals.html#tcomparefn" class="tsd-signature-type">TCompareFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;Comparator.defaultCompareFn</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> compareFn: <span class="tsd-signature-type">TCompareFn</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;Comparator.defaultCompareFn</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="heaptree.html" class="tsd-signature-type">HeapTree</a></h4>
@@ -174,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">comparator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Comparator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L16">lib/heap-tree/heap-tree.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L21">lib/heap-tree/heap-tree.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -189,7 +209,7 @@
 					<div class="tsd-signature tsd-kind-icon">heap<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L21">lib/heap-tree/heap-tree.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L26">lib/heap-tree/heap-tree.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,7 +231,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L9">lib/heap-tree/heap-tree.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L14">lib/heap-tree/heap-tree.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -227,13 +247,13 @@
 					<a name="add" class="tsd-anchor"></a>
 					<h3>add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="heaptree.html" class="tsd-signature-type">HeapTree</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L64">lib/heap-tree/heap-tree.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L75">lib/heap-tree/heap-tree.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -244,7 +264,36 @@
 									<h5>element: <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="heaptree.html" class="tsd-signature-type">HeapTree</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="addlistener" class="tsd-anchor"></a>
+					<h3>add<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Listener<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventName</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.addListener</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:47</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventName: <span class="tsd-signature-type">TEventName</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -258,7 +307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L164">lib/heap-tree/heap-tree.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L179">lib/heap-tree/heap-tree.ts:179</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -286,7 +335,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L184">lib/heap-tree/heap-tree.ts:184</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L199">lib/heap-tree/heap-tree.ts:199</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -314,7 +363,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L174">lib/heap-tree/heap-tree.ts:174</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L189">lib/heap-tree/heap-tree.ts:189</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -332,6 +381,58 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="emit" class="tsd-anchor"></a>
+					<h3>emit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventName</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.emit</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:41</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventName: <span class="tsd-signature-type">TEventName</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">T</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="eventnames" class="tsd-anchor"></a>
+					<h3>event<wbr>Names</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">event<wbr>Names<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventName</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.eventNames</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:62</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TEventName</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="find" class="tsd-anchor"></a>
 					<h3>find</h3>
@@ -342,7 +443,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L117">lib/heap-tree/heap-tree.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L132">lib/heap-tree/heap-tree.ts:132</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -370,7 +471,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L216">lib/heap-tree/heap-tree.ts:216</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L231">lib/heap-tree/heap-tree.ts:231</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -395,7 +496,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L232">lib/heap-tree/heap-tree.ts:232</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L247">lib/heap-tree/heap-tree.ts:247</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -420,7 +521,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L224">lib/heap-tree/heap-tree.ts:224</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L239">lib/heap-tree/heap-tree.ts:239</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -445,7 +546,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L200">lib/heap-tree/heap-tree.ts:200</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L215">lib/heap-tree/heap-tree.ts:215</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -470,7 +571,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L192">lib/heap-tree/heap-tree.ts:192</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L207">lib/heap-tree/heap-tree.ts:207</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -495,7 +596,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L208">lib/heap-tree/heap-tree.ts:208</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L223">lib/heap-tree/heap-tree.ts:223</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -520,7 +621,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L266">lib/heap-tree/heap-tree.ts:266</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L281">lib/heap-tree/heap-tree.ts:281</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -547,7 +648,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L249">lib/heap-tree/heap-tree.ts:249</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L264">lib/heap-tree/heap-tree.ts:264</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -574,7 +675,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L151">lib/heap-tree/heap-tree.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L166">lib/heap-tree/heap-tree.ts:166</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -601,6 +702,93 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="off" class="tsd-anchor"></a>
+					<h3>off</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">off<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventName</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.off</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:34</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventName: <span class="tsd-signature-type">TEventName</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="on" class="tsd-anchor"></a>
+					<h3>on</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventName</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.on</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:22</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventName: <span class="tsd-signature-type">TEventName</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="once" class="tsd-anchor"></a>
+					<h3>once</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">once<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventName</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.once</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:28</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventName: <span class="tsd-signature-type">TEventName</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="peek" class="tsd-anchor"></a>
 					<h3>peek</h3>
@@ -611,7 +799,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L30">lib/heap-tree/heap-tree.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L37">lib/heap-tree/heap-tree.ts:37</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -630,7 +818,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L41">lib/heap-tree/heap-tree.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L48">lib/heap-tree/heap-tree.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -643,13 +831,13 @@
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, comparator<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Comparator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="heaptree.html" class="tsd-signature-type">HeapTree</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, comparator<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Comparator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L76">lib/heap-tree/heap-tree.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L91">lib/heap-tree/heap-tree.ts:91</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -663,7 +851,62 @@
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> comparator: <span class="tsd-signature-type">Comparator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;this.comparator</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="heaptree.html" class="tsd-signature-type">HeapTree</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removealllisteners" class="tsd-anchor"></a>
+					<h3>remove<wbr>All<wbr>Listeners</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>All<wbr>Listeners<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TEventName</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.removeAllListeners</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:58</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> eventName: <span class="tsd-signature-type">TEventName</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removelistener" class="tsd-anchor"></a>
+					<h3>remove<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Listener<span class="tsd-signature-symbol">(</span>eventName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventName</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from EventEmitter.removeListener</p>
+								<ul>
+									<li>Defined in C:/Users/iprit/WebstormProjects/algo-js/heap-tree/node_modules/@algo-js/core/build/main/lib/utils/event-emitter/event-emitter.d.ts:53</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventName: <span class="tsd-signature-type">TEventName</span></h5>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">TEventCallback</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -677,7 +920,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L240">lib/heap-tree/heap-tree.ts:240</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L255">lib/heap-tree/heap-tree.ts:255</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -707,7 +950,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/226b49d/src/lib/heap-tree/heap-tree.ts#L136">lib/heap-tree/heap-tree.ts:136</a></li>
+									<li>Defined in <a href="https://github.com/algo-js/heap-tree/blob/a5068d3/src/lib/heap-tree/heap-tree.ts#L151">lib/heap-tree/heap-tree.ts:151</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -748,6 +991,9 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="heaptree.html#add" class="tsd-kind-icon">add</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="heaptree.html#computeleftchildindex" class="tsd-kind-icon">compute<wbr>Left<wbr>Child<wbr>Index</a>
 							</li>
@@ -756,6 +1002,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="heaptree.html#computerightchildindex" class="tsd-kind-icon">compute<wbr>Right<wbr>Child<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#emit" class="tsd-kind-icon">emit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="heaptree.html#find" class="tsd-kind-icon">find</a>
@@ -787,6 +1039,15 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="heaptree.html#iscorrectorder" class="tsd-kind-icon">is<wbr>Correct<wbr>Order</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#off" class="tsd-kind-icon">off</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#on" class="tsd-kind-icon">on</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#once" class="tsd-kind-icon">once</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="heaptree.html#peek" class="tsd-kind-icon">peek</a>
 							</li>
@@ -795,6 +1056,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="heaptree.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="heaptree.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="heaptree.html#swap" class="tsd-kind-icon">swap</a>
@@ -812,8 +1079,23 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="minheaptree.html" class="tsd-kind-icon">Min<wbr>Heap<wbr>Tree</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
-						<a href="../globals.html#tcomparefn" class="tsd-kind-icon">TCompare<wbr>Fn</a>
+					<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">
+						<a href="../globals.html#findextremum" class="tsd-kind-icon">find<wbr>Extremum</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="../globals.html#findmax" class="tsd-kind-icon">find<wbr>Max</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="../globals.html#findmin" class="tsd-kind-icon">find<wbr>Min</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#generateintegernumber" class="tsd-kind-icon">generate<wbr>Integer<wbr>Number</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#generatenumber" class="tsd-kind-icon">generate<wbr>Number</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="../globals.html#heaptreeevents" class="tsd-kind-icon">Heap<wbr>Tree<wbr>Events</a>
 					</li>
 				</ul>
 			</nav>
