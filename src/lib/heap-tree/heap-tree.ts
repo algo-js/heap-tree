@@ -23,7 +23,7 @@ export class HeapTree<T> extends EventEmitter<T> {
   /**
    * Array representation of the heap
    */
-  private heap: T[] = [];
+  protected heap: T[] = [];
 
   constructor(compareFn: TCompareFn<T> = Comparator.defaultCompareFn) {
     super();
