@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/IPRIT/algo-js/heap-tree",
+  "repository": "https://github.com/algo-js/heap-tree",
   "license": "MIT",
   "keywords": [],
   "scripts": {
