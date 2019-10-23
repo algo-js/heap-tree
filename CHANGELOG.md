@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/algo-js/heap-tree/compare/v1.1.4...v1.1.5) (2019-10-23)
+
+
+### Bug Fixes
+
+* **package.json:** fixed a git url ([2850c1e](https://github.com/algo-js/heap-tree/commit/2850c1e))
+
+
+
 ### [1.1.4](https://github.com///compare/v1.1.3...v1.1.4) (2019-10-21)
 
 
