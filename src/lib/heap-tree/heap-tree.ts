@@ -146,6 +146,13 @@ export class HeapTree<T> extends EventEmitter<T> {
   }
 
   /**
+   * Clears up entire heap
+   */
+  public clear(): void {
+    this.heap = [];
+  }
+
+  /**
    * @return {string}
    */
   public toString(): string {
