@@ -268,7 +268,7 @@ export class HeapTree<T> extends EventEmitter<T> {
         this.getParent(currentIndex),
         this.heap[currentIndex]
       )
-      ) {
+    ) {
       const nextIndex = this.computeParentIndex(currentIndex);
       this.swap(currentIndex, nextIndex);
       currentIndex = nextIndex;
