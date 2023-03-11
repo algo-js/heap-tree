@@ -88,7 +88,7 @@ export class HeapTree<T> extends EventEmitter<T> {
    * @param {Comparator} [comparator]
    * @return {HeapTree}
    */
-  public remove(element, comparator = this.comparator): this {
+  public remove(element: T, comparator = this.comparator): this {
     // Find number of elements to remove
     const numberOfItemsToRemove = this.find(element, comparator).length;
 
@@ -129,7 +129,7 @@ export class HeapTree<T> extends EventEmitter<T> {
    * @param {Comparator} [comparator]
    * @return {number[]}
    */
-  public find(element, comparator = this.comparator): number[] {
+  public find(element: T, comparator = this.comparator): number[] {
     const foundItemIndices = [];
 
     for (
