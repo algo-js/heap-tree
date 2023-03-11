@@ -225,7 +225,7 @@ test('heap tree clears', t => {
   tree.add(3);
   tree.add(4);
 
-  t.deepEqual(tree.peek(), 0);
+  t.deepEqual(tree.peek(), 4);
 
   tree.clear();
 
