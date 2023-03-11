@@ -215,6 +215,23 @@ test('max heap tree find', t => {
   t.deepEqual(tree.find(3), [1, 2]);
 });
 
+test('heap tree clears', t => {
+  const tree = new MaxHeapTree<number>();
+
+  tree.add(0);
+  tree.add(1);
+  tree.add(2);
+  tree.add(3);
+  tree.add(3);
+  tree.add(4);
+
+  t.deepEqual(tree.peek(), 0);
+
+  tree.clear();
+
+  t.deepEqual(tree.peek(), undefined);
+});
+
 test('max heap tree toString', t => {
   const tree = new MaxHeapTree<number>();
 
