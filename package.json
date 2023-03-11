@@ -1,6 +1,6 @@
 {
   "name": "@algo-js/heap-tree",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Heap tree implementation written on TypeScript",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
