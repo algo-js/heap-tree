@@ -34,9 +34,9 @@ export class HeapTree<T> extends EventEmitter<T> {
   /**
    * @return {*}
    */
-  public peek(): T {
+  public peek(): T | undefined {
     if (this.heap.length === 0) {
-      return null;
+      return undefined;
     }
 
     return this.heap[0];
@@ -45,9 +45,9 @@ export class HeapTree<T> extends EventEmitter<T> {
   /**
    * @return {*}
    */
-  public poll(): T {
+  public poll(): T | undefined {
     if (this.heap.length === 0) {
-      return null;
+      return undefined;
     }
 
     const element = this.heap[0];
@@ -268,7 +268,7 @@ export class HeapTree<T> extends EventEmitter<T> {
         this.getParent(currentIndex),
         this.heap[currentIndex]
       )
-    ) {
+      ) {
       const nextIndex = this.computeParentIndex(currentIndex);
       this.swap(currentIndex, nextIndex);
       currentIndex = nextIndex;

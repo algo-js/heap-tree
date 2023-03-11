@@ -22,7 +22,7 @@ const compareFn = (a: Item, b: Item) => {
 test('min heap tree peeks minimum value', t => {
   const tree = new MinHeapTree<number>();
 
-  t.is(tree.peek(), null);
+  t.is(tree.peek(), undefined);
 
   tree.add(1);
   t.is(tree.peek(), 1);
@@ -46,7 +46,7 @@ test('min heap tree peeks minimum value', t => {
 test('min heap tree polls minimum value', t => {
   const tree = new MinHeapTree<number>();
 
-  t.is(tree.poll(), null);
+  t.is(tree.poll(), undefined);
 
   tree.add(1);
   tree.add(-5);
@@ -63,14 +63,14 @@ test('min heap tree polls minimum value', t => {
   t.is(tree.poll(), 3);
   t.is(tree.poll(), 3);
   t.is(tree.poll(), 10);
-  t.is(tree.poll(), null);
-  t.is(tree.poll(), null);
+  t.is(tree.poll(), undefined);
+  t.is(tree.poll(), undefined);
 });
 
 test('max heap tree peeks minimum value', t => {
   const tree = new MaxHeapTree<number>();
 
-  t.is(tree.peek(), null);
+  t.is(tree.peek(), undefined);
 
   tree.add(1);
   t.is(tree.peek(), 1);
@@ -97,7 +97,7 @@ test('max heap tree peeks minimum value', t => {
 test('max heap tree polls minimum value', t => {
   const tree = new MaxHeapTree<number>();
 
-  t.is(tree.poll(), null);
+  t.is(tree.poll(), undefined);
 
   const inserts = [1, -5, -1, 3, 3, -10, 10, 10, 10, 10, 9, 8];
   const polls = [10, 10, 10, 10, 9, 8, 3, 3, 1, -1, -5, -10];
@@ -110,8 +110,8 @@ test('max heap tree polls minimum value', t => {
     t.is(tree.poll(), poll);
   }
 
-  t.is(tree.poll(), null);
-  t.is(tree.poll(), null);
+  t.is(tree.poll(), undefined);
+  t.is(tree.poll(), undefined);
 });
 
 test('heap tree is empty', t => {
@@ -163,16 +163,16 @@ test('heap tree remove', t => {
   t.is(tree.peek(), 10);
 
   tree.remove(10);
-  t.is(tree.peek(), null);
+  t.is(tree.peek(), undefined);
 
   tree.remove(5);
-  t.is(tree.peek(), null);
+  t.is(tree.peek(), undefined);
 });
 
 test('heap tree remove (test cases)', t => {
   const tree = new MaxHeapTree<number>();
 
-  t.is(tree.poll(), null);
+  t.is(tree.poll(), undefined);
 
   const tests = [1, -5, -1, 3, 3, -10, 10, 10, 10, 10, 9, 8];
 
@@ -186,7 +186,7 @@ test('heap tree remove (test cases)', t => {
     tree.remove(remove);
   }
 
-  t.is(tree.poll(), null);
+  t.is(tree.poll(), undefined);
 });
 
 test('min heap tree find', t => {
